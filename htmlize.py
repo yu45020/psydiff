@@ -53,12 +53,12 @@ def html_header():
 
     install_path = get_install_path()
 
-    js_filename = ''.join([install_path, 'nav.js'])
+    js_filename = os.path.join(install_path, 'nav.js')
     js_file = open(js_filename, 'r')
     js_text = js_file.read()
     js_file.close()
 
-    css_filename = ''.join([install_path, 'diff.css'])
+    css_filename = os.path.join(install_path, 'diff.css')
     css_file = open(css_filename, 'r')
     css_text = css_file.read()
     css_file.close()
