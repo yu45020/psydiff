@@ -294,9 +294,7 @@ def parse_file(filename):
 
 def get_install_path():
     exec_name = os.path.abspath(__file__)
-    path = exec_name.rindex('/') + 1
-    return exec_name[:path]
-
+    return os.path.dirname(exec_name)
 
 def lfilter(f, ls):
     return list(filter(f, ls))
